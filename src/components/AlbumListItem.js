@@ -10,6 +10,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 /*
  * Create Album List Item Component
@@ -17,6 +18,10 @@ import CardSection from './CardSection';
  */
 const AlbumListItem = ({ album }) => {
 
+  /* Buy button text */
+  const buttonText = 'Buy Album';
+
+  /* CSS Styles */
   const styles = {
       headerContentStyles: {
         flexDirection: 'column',
@@ -64,13 +69,13 @@ const AlbumListItem = ({ album }) => {
           </View>
         </CardSection>
         <CardSection>
-          <View>
             <Image
               source={{ uri: image }}
               style={imageArtworkStyles}
             />
-            <Text>{ url }</Text>
-          </View>
+        </CardSection>
+        <CardSection>
+          <Button text={buttonText} url={url} />
         </CardSection>
       </Card>
   );
