@@ -9,8 +9,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-/* Create App Component */
+/* Create Header Component */
 const Header = (props) => {
+
   const { textStyles, viewStyles } = styles;
 
   return (
