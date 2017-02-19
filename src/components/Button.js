@@ -7,10 +7,13 @@
  */
 
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, Linking } from 'react-native';
 
-/* Create Button Component */
-const Button = (props) => {
+/* Create Button Component
+ * Deconstructed {url, text} from props
+ */
+
+const Button = ({ url, text }) => {
 
   const styles = {
     buttonStyles: {
@@ -34,9 +37,9 @@ const Button = (props) => {
   };
 
   return (
-    <TouchableOpacity style={styles.buttonStyles}>
+    <TouchableOpacity onPress={() => Linking.openURL(url)} style={styles.buttonStyles}>
       <Text style={styles.textStyles}>
-        { props.text }
+        { text }
       </Text>
     </TouchableOpacity>
   );
