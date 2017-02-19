@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import axios from 'axios';
 import AlbumListItem from './AlbumListItem';
 
@@ -37,9 +37,9 @@ class AlbumList extends Component {
     );
 
     return (
-      <View>
+      <ScrollView>
         { albums }
-      </View>
+      </ScrollView>
     );
   }
 
