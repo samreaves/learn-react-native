@@ -7,12 +7,16 @@
  */
 
 import React from 'react';
-import { AppRegistry } from 'react-native';
+import { View, AppRegistry } from 'react-native';
 import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 /* Create App Component */
 const App = () => (
+  <View>
     <Header title={'Albums'} />
+    <AlbumList />
+  </View>
 );
 
 /* Render Home Component */
