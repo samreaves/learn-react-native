@@ -1,7 +1,9 @@
 {
   "extends": "rallycoding",
   "rules": {
-      "brace-style": ["error", "stroustrup"],
-      "padded-blocks": "off"
+    "arrow-body-style": "off",
+    "brace-style": ["error", "stroustrup"],
+    "max-len": "off",
+    "padded-blocks": "off"
   }
 }
